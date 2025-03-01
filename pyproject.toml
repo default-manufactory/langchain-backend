@@ -1,0 +1,35 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "ai-backend"
+version = "0.1.0"
+description = "LangChain backend with LangGraph and LangSmith"
+authors = [
+    {name = "gwangbaekun", email = "gwangbaekun@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+dependencies = [
+    "langchain>=0.3.19,<0.4.0",
+    "langgraph>=0.3.2,<0.4.0",
+    "langsmith>=0.3.11,<0.4.0",
+    "fastapi>=0.115.10,<0.116.0",
+    "uvicorn>=0.34.0,<0.35.0",
+    "openai>=1.65.1,<2.0.0",
+    "pydantic>=2.5.3,<3.0.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "langchain-openai (>=0.3.7,<0.4.0)"
+]
+
+[tool.poetry]
+packages = [{include = "ai_backend", from = "src"}]
+package-mode = false
+
+[tool.poetry.scripts]
+start = "ai_backend.main:start"
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = "^0.34.0"
+

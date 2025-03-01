@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  ai-backend:
+    build: .
+    container_name: ai-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONPATH=/app/src
+      - PYTHONUNBUFFERED=1
+      - PYTHONFAULTHANDLER=1
+      - POETRY_VIRTUALENVS_CREATE=false
+      - POETRY_NO_INTERACTION=1
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: ["poetry", "run", "start"]
+    restart: always

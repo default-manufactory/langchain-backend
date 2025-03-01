@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environments
+venv/
+.env
+.envrc
+*.venv
+.poetry/
+
+# Poetry-specific
+poetry.lock
+
+# FastAPI / Uvicorn
+instance/
+*.log
+*.db
+
+# VS Code & IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml
+Dockerfile
+*.dockerignore
+
+# Logs
+logs/
+*.log
+
+# Coverage & Testing
+htmlcov/
+.coverage
+*.cover
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Uploads (if storing images locally)
+uploads/
